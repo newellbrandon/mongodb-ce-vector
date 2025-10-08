@@ -42,7 +42,7 @@ EOF
 ├── sampledata.archive # <- NEW
 ├── vector-index.js
 └── vector-query.js
-
+```
 
 ## Running the Environment
 
