@@ -1,6 +1,10 @@
 # [Deploy MongoDB Community with Vector Search via Docker](https://www.mongodb.com/docs/atlas/atlas-vector-search/tutorials/vector-search-quick-start/?deployment-type=self)
-https://www.mongodb.com/docs/atlas/atlas-vector-search/tutorials/vector-search-quick-start/?deployment-type=self
 
+
+Documentation that inspired this repo:
+* https://www.mongodb.com/docs/atlas/atlas-vector-search/tutorials/vector-search-quick-start/?deployment-type=self
+and
+* https://www.mongodb.com/docs/manual/administration/install-community/?operating-system=docker&search-docker=with-search-docker
 ## Setup
 
 Run these commands to create the sampledata, keyfile, pwfile, and `.env` file:
