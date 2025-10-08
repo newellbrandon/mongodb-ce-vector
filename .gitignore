@@ -2,7 +2,9 @@
 __pycache__/
 *.py[codz]
 *$py.class
-
+pwfile
+*.key
+sampledata.archive
 # C extensions
 *.so
 
