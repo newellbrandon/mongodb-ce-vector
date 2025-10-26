@@ -15,6 +15,7 @@ services:
          - ./mongod.conf:/etc/mongod.conf:ro
          - ./rs0.key:/etc/mongo-keyfile:ro
          - ./init-mongo.sh:/docker-entrypoint-initdb.d/init-mongo.sh:ro
+         - ./sampledata.archive:/sampledata.archive:ro
       networks:
          - search-community
       environment:
