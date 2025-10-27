@@ -79,12 +79,48 @@ load("vector-index.js")
 
 This will create a vector search index named `vector_index` on the `embedded_movies` collection.
 
+You can test verify the status of the index build by running; 
+
+```bash
+rs0 [direct: primary] sample_mflix> db.embedded_movies.getSearchIndexes()
+```
+
+Sample results
+
+```javascript
+[
+  {
+    id: '68ff8f694680b21311f84c25',
+    name: 'vector_index',
+    type: 'vectorSearch',
+    latestDefinition: {
+      type: 'vectorSearch',
+      indexID: ObjectId('68ff8f694680b21311f84c25'),
+      name: 'vector_index',
+      database: 'sample_mflix',
+      lastObservedCollectionName: 'embedded_movies',
+      collectionUUID: UUID('4ed0eeeb-a207-4bf3-84e1-a26eceea987b'),
+      numPartitions: 1,
+      fields: [
+        {
+          type: 'vector',
+          path: 'plot_embedding_voyage_3_large',
+          numDimensions: 2048,
+          similarity: 'dotProduct',
+          quantization: 'scalar'
+        }
+      ],
+      indexFeatureVersion: 4
+    }
+  }
+]
+```
 ## Running Vector Search Queries
 
 Execute the vector search query to find movies similar to "time travel":
 
 ```bash
-# Load and execute the vector query script
+# Run query with 2048 dimension queryVector.
 load("vector-query.js")
 ```
 

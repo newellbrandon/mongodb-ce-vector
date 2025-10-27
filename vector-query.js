@@ -17,5 +17,5 @@ db.embedded_movies.aggregate([
         "score": { $meta: "vectorSearchScore" }
       }
     }
-  ])
+  ]).toArray().forEach(doc => printjson(doc));
   
